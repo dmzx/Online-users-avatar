@@ -1,0 +1,7 @@
+services:
+    dmzx.onlineusersavatar.listener:
+        class: dmzx\onlineusersavatar\event\listener
+        arguments:
+            - '@user'
+        tags:
+            - { name: event.listener }
