@@ -65,7 +65,7 @@ class listener implements EventSubscriberInterface
 				}
 			}
 
-			if (!empty(phpbb_get_user_avatar($row)))
+			if (!empty($row['user_avatar']))
 			{
 				$replace_avatar = '<span class="useravatar">' . phpbb_get_user_avatar($row) . '</span> ' . $row['username'] .	'';
 			}
