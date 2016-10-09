@@ -47,6 +47,8 @@ class listener implements EventSubscriberInterface
 		$u_online = $event['user_online_link'];
 		$online_users = $event['online_users'];
 		$online_userlist = $event['online_userlist'];
+		
+		$board_url = generate_board_url() . '/';
 
 		$username = $replace = array();
 		foreach ($event['rowset'] as $row)
@@ -71,8 +73,10 @@ class listener implements EventSubscriberInterface
 			}
 			else
 			{
-				$no_avatar = generate_board_url() . "/styles/" . rawurlencode($this->user->style['style_path']) . '/theme/images/no_avatar.gif';
-				$replace_avatar = '<span class="useravatar"><img src="' . $no_avatar . '" alt="" /></span> ' . $row['username'];
+				$avatar = phpbb_get_user_avatar($row);
+				$no_avatar = empty($avatar) ? '<img src="' . $board_url . 'adm/images/no_avatar.gif" alt="" />' : $avatar;
+
+				$replace_avatar = '<span class="useravatar">' . $no_avatar . '</span> ' . $row['username'];
 			}
 
 			$username[] = $row['username'];
