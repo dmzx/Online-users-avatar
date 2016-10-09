@@ -47,7 +47,7 @@ class listener implements EventSubscriberInterface
 		$u_online = $event['user_online_link'];
 		$online_users = $event['online_users'];
 		$online_userlist = $event['online_userlist'];
-		
+
 		$board_url = generate_board_url() . '/';
 
 		$username = $replace = array();
