@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Users avatars in online list",
 	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.0",
-	"time": "2016-06-19",
+	"version": "1.0.1",
+	"time": "2016-10-09",
 	"license": "GPL-2.0",
 	"authors": [
 		{
@@ -23,7 +23,7 @@
 	"extra": {
 		"display-name": "Online users avatar",
 		"soft-require": {
-		"phpbb/phpbb": ">=3.1.7-RC1"
+		"phpbb/phpbb": ">=3.1.4-RC1"
 		},
 		"version-check": {
 			"host": "www.dmzx-web.net",
